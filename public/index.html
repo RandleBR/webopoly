@@ -9,7 +9,10 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <style>
+        .top-buffer { margin-top:20px; }
+        .results-list { color:darkblue; }
+    </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -47,25 +50,32 @@
                     </header>
                 </div>
             </div>
-            <div class="container-fluid">
-
-                <form class="form-gamepiece" action="/gamepiece" method="post">
+            <div id="new_game_piece_form" class="container-fluid">
+                <form  name="New-game-piece" action="">
                     <div class="row">
                         <div class="col-xs-3">
                             <label for="t1">Game Piece</label>
-                            <input class="form-control" name="ticket" id="t1" type="text" placeholder="2 left and 1 righmost characters" />
+                            <input class="form-control" name="gamepiece" id="game_piece" type="text" placeholder="2 left and 1 righmost characters" />
                         </div>
                     </div>
-                    <div class="row">
-                        <button class="btn btn-primary btn-default" type="submit">Add Game Piece</button>
+                    <div class="row top-buffer">
+                        <div class="col-xs-3">
+                            <button class="btn btn-primary btn-default" id="btnadd">Add Game Piece</button>
+                        </div>
                     </div>
-                </form>
+                </form>                
             </div>
+        </div>
+        <div id="results">
+            <ul class="results-list">
+                <!-- results of the game piece are listed here--> 
+            </ul>
         </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/webopoly.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

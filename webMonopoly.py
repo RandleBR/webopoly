@@ -21,10 +21,11 @@ def login():
             <input value="Login" type="submit" />
         </form>
     '''
-
-@post('/gamepiece') 
+@get('/gamepiece')
+@post('/gamepiece')
+@post('/newgamepiece') 
 def do_gamepiece():
-    ticket = request.forms.get('ticket')
+    ticket = request.forms.get('gamepiece')
     return addGamePiece(ticket)
 
 @route('/<filepath:path>')
